@@ -10,17 +10,26 @@
 
 int main(void)
 {
-	int n;
+	int i = 0;
+	int j;
+	int count = 0;
 
-	for (n = 0; n <= 99; n++)
+	while (i <= 8)
 	{
-		putchar((n / 10) + '0');
-		putchar((n % 10) + '0');
-		if (n != 99)
+		j = i + 1;
+		while (j <= 9)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(i + '0');
+			putchar(j + '0');
+			if (count != 44)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			j++;
+			count++;
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);
