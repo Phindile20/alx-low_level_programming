@@ -1,19 +1,20 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * main - Entry point
+ * main - Write a program that prints _putchar, followed by a new*
  *
- * Return: Always 0 (Success)
+ *
+ * Return: 0
  */
 int main(void)
 {
-	char *sh = "Holberton";
-
-	while (*sh)
-	{
-		_putchar(*sh);
-		sh++;
-	}
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 	_putchar('\n');
-
 	return (0);
 }
