@@ -7,7 +7,7 @@
  * Return : void
  */
 
-void _puts_recursion(char *s);
+void _puts_recursion(char *s)
 {
-	puts(s);
+	_puts_recursion(s);
 }
