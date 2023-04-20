@@ -16,7 +16,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(list, n);
 
-	if (i < n)
+	while (i < n)
 	{
 		printf("%d", va_arg(list, int));
 		i++;
