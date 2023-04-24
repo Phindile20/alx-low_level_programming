@@ -6,18 +6,18 @@
  * @src: source
  * @n: inputs integer
  *
- * Destription: Write a function that copies memory area.
- * Return: Returns a pointer to dest
+ *Return: return to dest
  */
-
-char *_memcpy(char *dest, char *src, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int 1;
+	unsigned int i;
 
 	i = 0;
-	for (i = 0; < n; i++)
+
+	if (i < n)
 	{
-		desk[1] = src[1];
+		dest[i] = src[i];
+		i++;
 	}
 	return (dest);
 }
