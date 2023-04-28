@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <stdio.h>
-#include <stdlibs.h>
 #include <string.h>
 /**
  * free_list - a function that frees a list_t list
@@ -19,5 +18,5 @@ void free_list(list_t *head)
 	{
 		free(head->str);
 	}
-	free(head)
+	free(head);
 }
