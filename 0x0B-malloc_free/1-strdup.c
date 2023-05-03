@@ -6,34 +6,36 @@
  *
  * str: duplicate of the string
  *
- * Returns: NULL if str = NULL
+ * Return: returns a pointer to a newly allocated space in memory,
+ * which contains a copy of the string given as a parameter
  */
 char *_strdup(char *str)
 {
-	char *st;
-	int i = 0, s = 1;
+	char *dup;
+	int i, a;
 
-	if (str == 0)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	while (str[i])
+	for (i = 0; str[i]; i++)
+		a++;
+
+	dup = malloc(sizeof(char) * (a + 1));
+
+	while (dup == NULL)
 	{
-		i++;
-	}
-
-	st = malloc(sizeof(char) * (i + 1));
-
-	if (st == NULL)
 		return (NULL);
-
-	if (st = i)
-	{
-		st[i] = str[s];
-		s++;
 	}
 
-	st[s] = '\0';
-	return (st);
+	for (i = 0; str[i]; i++)
+	{
+		dup[i] = str[i];
+	}
+
+	dup[a] = '\0';
+
+	return (dup);
+
 }
