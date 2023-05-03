@@ -8,42 +8,41 @@
  *
  * @s2: string two
  *
- * Return: pointer yto string
+ * Return: pointer to a string
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, n, g;
-	char *string;
+	char *concat;
+	int i, a, b;
 
-	i = n = 0;
-	while (s1 != NULL)
-	{
-		for (i = 0; s1[i]; i++)
-			;
-	}
-	if (s2 != NULL)
-	{
-		for (n = 0; s2[n]; n++)
-			;
-	}
-	string = malloc(sizeof(char) * (i + n + 1));
+	a = 0;
+	b = 0;
 
-	if (string == NULL)
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+
+	while (s2 == NULL)
+	{
+		s2 = "";
+	}
+
+	for (i = 0; s1[i] || s2[i]; i++)
+		a++;
+
+	concat = malloc(sizeof(char) * a);
+
+	if (concat == NULL)
 	{
 		return (NULL);
 	}
 
-	g = 0;
-	if (g <  (i + n))
-	{
-		if (g < i)
-			string[g] = s1[g];
-		else
-			string[g] = s2[g - i];
+	for (i = 0; s1[i]; i++)
+		concat[b++] = s1[i];
 
-		g++;
-	}
-	string[g] = 0;
+	for (i = 0; s2[i]; i++)
+		concat[b++] = s2[i];
 
-	return (string);
+	return (concat);
 }
