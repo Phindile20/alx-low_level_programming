@@ -30,7 +30,7 @@ else if (coins >= 2)
 coins -= 2;
 else if (coins >= 1)
 coins -= 1;
-nCoins += 1; 
+nCoins += 1;
 }
 printf("%d\n", nCoins);
 return (0);
