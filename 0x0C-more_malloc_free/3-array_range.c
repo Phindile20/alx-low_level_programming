@@ -4,9 +4,9 @@
 /**
  * array_range - function that creates an array of integers.
  *
- * min: minimal value of array
+ * @min: minimal value of array
  *
- * max: maximum value of array
+ * @max: maximum value of array
  *
  * Return: pointer to the address of the memory block
  */
