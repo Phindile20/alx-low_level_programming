@@ -8,7 +8,7 @@
  */
 void free_dog(dog_t *d)
 {
-	while (!d)
+	if (!d)
 	{
 		return;
 		free(d->name);
