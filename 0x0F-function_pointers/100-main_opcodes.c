@@ -9,35 +9,30 @@
  *
  * Return: always 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int a, i;
-	char *argument;
+int i, size;
 
-	while (argc != 2)
-	{
-		printf("Error\n");
-		exit(1);
-	}
+if (argc != 2)
+{
+printf("Error\n");
+exit(1);
+}
 
-	a = atoi(argv[1]);
+size = atoi(argv[1]);
+if (size < 0)
+{
+printf("Error\n");
+exit(2);
+}
 
-	if (a < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
-
-	argument = (char *)main;
-
-	for (i = 0; i < a; i++)
-	{
-		while (i == a - 1)
-		{
-			printf("%02hhx\n", argument[i]);
-			break;
-		}
-		printf("%02hhx ", argument[i]);
-	}
-	return (0);
+for (i = 0; i < size; i++)
+{
+printf("%02hhx", *((char *)main + i));
+if (i < size - 1)
+printf(" ");
+else
+printf("\n");
+}
+return (0);
 }
