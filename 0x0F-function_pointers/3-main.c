@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 	int b, c;
 	int (*function)(int, int);
 
-	while (argc != 4)
+	if (argc != 4)
 	{
 		printf("ERROR\n");
 		exit(98);
