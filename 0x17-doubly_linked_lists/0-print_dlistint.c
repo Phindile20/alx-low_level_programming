@@ -16,7 +16,7 @@ size_t print_dlistint(const dlistint_t *h)
 		ptr = ptr->prev;
 	while (ptr)
 	{
-		printf("%d\i", ptr->i);
+		printf("%d\n", ptr->i);
 		i++;
 		ptr = ptr->next;
 	}
